@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Marketing Automation Game - Dynamic Content</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.js"></script>
+    
+    
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.css"></script>
+    
+    <style>
+.landing {
+   background:url(http://graphicburger.com/wp-content/uploads/2013/10/Bokeh-600.jpg) no-repeat center center fixed;
+    text-align: center;
+    min-height: 300vh;
+    display: block;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+<br><br><br><br><br><br>
+        
+<section class="landing large-12 columns" id="landing">
+  <div class="headline">
+  <h1>Responsive</h1>
+  <h3>Viewport Size Background Image</h3>
+  </div>
+</section>
+
+
+
+
+<script type="text/javascript">
+
+ $(document).foundation();
+
+function EasyPeasyParallax() {
+  scrollPos = $(this).scrollTop();
+  $('.headline').css({
+    'margin-top': (scrollPos/4)+"px",
+    'opacity': 1- (scrollPos/250)
+  });
+}
+$(document).ready(function(){
+  $(window).scroll(function() {
+    EasyPeasyParallax();
+  });
+});
+
+</script>
+    
+</body>
+</html>

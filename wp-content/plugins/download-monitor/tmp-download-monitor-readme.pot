@@ -1,0 +1,954 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Download Monitor"
+msgstr ""
+
+#. Short description.
+msgid "Download Monitor is a plugin for uploading and managing downloads, tracking downloads, and displaying links."
+msgstr ""
+
+#. Screenshot description.
+msgid "The main admin screen lists your downloads using familiar WordPress UI."
+msgstr ""
+
+#. Screenshot description.
+msgid "Easily add file information and multiple versions."
+msgstr ""
+
+#. Screenshot description.
+msgid "The quick add panel can be opened via a link about the post editor. This lets you quickly add a file and insert it into a post."
+msgstr ""
+
+#. Screenshot description.
+msgid "Display regular download links or fancy ones all using shortcodes and templates."
+msgstr ""
+
+#. Found in description header.
+msgid "Features"
+msgstr ""
+
+#. Found in description header.
+msgid "Download Monitor Extensions"
+msgstr ""
+
+#. Found in description header.
+msgid "Documentation"
+msgstr ""
+
+#. Found in description header.
+msgid "Contributing and reporting bugs"
+msgstr ""
+
+#. Found in description header.
+msgid "Support"
+msgstr ""
+
+#. Found in description list item.
+msgid "Add, edit and remove downloads from a familiar WP interface; Your downloads are just like posts."
+msgstr ""
+
+#. Found in description list item.
+msgid "Quick-add panel for adding downloads / files whilst editing posts."
+msgstr ""
+
+#. Found in description list item.
+msgid "Add multiple file versions to your downloads each with their own data like download count and file links."
+msgstr ""
+
+#. Found in description list item.
+msgid "Define alternative links (mirrors) per download version."
+msgstr ""
+
+#. Found in description list item.
+msgid "Categorize, tag, or add other meta to your downloads."
+msgstr ""
+
+#. Found in description list item.
+msgid "Display download links on the frontend using shortcodes."
+msgstr ""
+
+#. Found in description list item.
+msgid "Change the way download links get displayed via template files."
+msgstr ""
+
+#. Found in description list item.
+msgid "Track downloads counts and log user download attempts."
+msgstr ""
+
+#. Found in description list item.
+msgid "Member only downloads, requires users to be logged in to download your files."
+msgstr ""
+
+#. Found in description list item.
+msgid "Customisable endpoints for showing pretty download links."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Download Monitor provides an interface for uploading and managing downloadable files (including support for multiple versions), inserting download links into posts, and logging downloads."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "<a href=\"https://www.download-monitor.com/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-after-features\">Read more about Download Monitor</a>."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Extend the core Download Monitor plugin with it's powerful extensions. All extensions come with one year of updates and support.<br />"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Some of our popular extensions include: <a href=\"https://www.download-monitor.com/extensions/page-addon/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-block-page-addon\">Page Addon</a>, <a href=\"https://www.download-monitor.com/extensions/email-lock/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-block-email-lock\">Email Lock</a>, <a href=\"https://www.download-monitor.com/extensions/csv-importer/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-block-csv-importer\">CSV Importer</a> and <a href=\"https://www.download-monitor.com/extensions/gravity-forms/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-block-gravity-forms-lock\">Gravity Forms Lock</a>."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Want to see more? <a href=\"https://www.download-monitor.com/extensions/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-block-browse-all\">Browse All Extensions</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Documentation can be found on the <a href=\"https://www.download-monitor.com/documentation/?utm_source=wp-plugin-repo&amp;utm_medium=link&amp;utm_campaign=description-documentation\">Download Monitor website</a>."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "You can contribute code to this plugin via GitHub: <a href=\"https://github.com/download-monitor/download-monitor\">https://github.com/download-monitor/download-monitor</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "You can contribute localizations via Transifex <a href=\"https://www.transifex.com/projects/p/download-monitor/\">https://www.transifex.com/projects/p/download-monitor/</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Use the WordPress.org forums for community support. If you spot a bug, you can of course log it on <a href=\"https://github.com/download-monitor/download-monitor\">Github</a> instead where we can act upon it more efficiently."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Unfortunately we can't offer you help with a customisation. Please consider hiring a developer for your website's customizations."
+msgstr ""
+
+#. Found in installation header.
+msgid "Automatic installation"
+msgstr ""
+
+#. Found in installation header.
+msgid "Manual installation"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Download the plugin file to your computer and unzip it"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Using an FTP program, or your hosting control panel, upload the unzipped plugin folder to your WordPress installation's <code>wp-content/plugins/</code> directory."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin from the Plugins menu within the WordPress admin."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "In the search field type \"Download Monitor\" and click Search Plugins. Once you've found the plugin you can view details about it such as the the point release, rating and description. Most importantly of course, you can install it by clicking <em>Install Now</em>."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "The manual installation method involves downloading the plugin and uploading it to your webserver via your favourite FTP application."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Check if $visitor_ua isn't empty to prevent stristr warnings."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Added wmv filetype icon support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Correctly populate data on quick edit of download."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Settings tab now loads tab of set URL hash."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: We added a separate 'No Access' page that includes the following features:"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "No Access Page : Added [dlm_no_access] shortcode that displays the no access content."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "No Access Page : Added new option in Access settings tab to set No Access Page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "No Access Page : Added new template file for no access page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "No Access Page : We now redirect to set No Access page (if set) when user has no access to download."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added ability to remove log entries."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added browser detection for IE 11 and up."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added OS detection for Windows 8.1"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added OS detection for Windows 10"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added Featured download, Members only and Redirect to file to bulk edit options."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added Featured download, Members only and Redirect to file to quick edit options."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Small tweak to make download count fit better in box template."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fixed a zero file size bug."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fixed featured image disappears bug, props <a href=\"https://wordpress.org/support/profile/ricardopires\">Ricardo</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Search template file in custom path before in plugin path."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added option to only count downloads and add logs from unique ip addresses, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: It's now possible to display downloads with the downloads shortcode that are in all given categories (AND instead of OR) by using + (plus_ instead of , (comma)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Display nginx rules if server is running nginx."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added Multisite / Network compatibility."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Redone blacklist IP feature, now available in the 'Access' tab."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Redone blacklist user agent feature, now available in the 'Access' tab."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Added icon support for Office X Excel &amp; PPT extensions."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Run thumbnail compatibility method later to allowed themes to register first."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Prefixed admin CSS classes to prevent plugin conflicts."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fix checking shortcodes for empty version strings, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fixed a call of trigger() in DLM_Download_Handler, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Remove trailing space from downloads count, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Directory browser items are now always in alphabetical order, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: The 60 seconds download counter increment cool down is now set to version ID instead of download ID, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Created and implemented local independent basename fixing issues with Cyrillic alphabets."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Made user agents regexes filterable: dlm_ua_parser_regexes."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Optimized log status icons, also fixes WP emoji conflict."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Members Only check now only does check if requester can still download."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Replaced PHP4 constructors in widget."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Added Danish translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Updated Dutch translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Updated German translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fixed a bug that caused logs not to be displayed in WP 4.2."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Pass third arg to add_query_arg to prevent XSS."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Added 'Download Information' meta box to edit download screen that displays useful download information."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Feature: Error message shown when visitor has no access to download is now an option."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Fixing a bug where versions with spaces did not work, versions now are checked on a sanitized title."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Viewing logs now needs custom capability: dlm_manage_logs (automatically added to administrators)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Improved hotlink prevention check."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Extension page tweaks."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Added $download_id argument to dlm_hotlink_redirect filter."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Moved hash settings to their own tab."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Moved 'X-Accel-Redirect / X-Sendfile' and 'Prevent hotlinking' settings to General tab."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Optimized the Insert Download button."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Introduced a multi-byte-safe pathinfo so we can handle 'special' filenames."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Also set the post_date_gmt value for version dates."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Updated French translation. Props Li-An."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Updated German translation. Props maphy-psd."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Updated Swedish translation. Props EyesX."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Update Slovakian translation. Props attitude."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: Added Dutch translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed unused library jqueryFileTree."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "dlm_shortcode_download_content filter now also includes $atts."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed small parse file parse error because of whitespace."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed some admin menu hook priorities."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed an undefined method call 'get_filesize'."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Allow third party extensions to hijack [downloads] shortcode with filter dlm_shortcode_download_content."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Made 'wp_dlm_downloading' cookie only accessible through the HTTP protocol, props <a href=\"https://github.com/mdmower\">Matt Mower</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug that caused translations not to load."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug that prevented download versions from being removed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a pagination in 'insert download' shortcode bug."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug in the template loader when used with a custom directory, a slug and no custom template."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed assigning by reference, fixed strict notice when deleting downloads."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweaked template loader to accept arguments."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Allow downloads shortcode WP_Query arguments to be filtered with 'dlm_shortcode_downloads_args'."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed an extension activation error."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug that caused the featured image to disappear in some themes."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: In multisite only users that are a member of the blog can download 'member only' downloads."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Plugin is now initiated at plugins_loaded."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implemented auto loader."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Classes are no longer initiated at bottom of class file but whenever an object is needed."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Code standards corrections."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Introduced Template_Handler. Loading of template parts should be done through this class."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed $GLOBALS['dlm_logging'] global."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed $GLOBALS['DLM_Download_Handler'] global."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed internal use of $download_monitor global."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved all inline JavaScript to separate JavaScript files."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved all install related code to installer class."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved main plugin class to it's own file."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Deprecated 'dlm_create_log' function."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Redone extensions page."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug in shortcode download where orderby=download_count wasn't working."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed a bug where downloads didn't work with default WP permalink structure."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Delete dlm_file_version_ids_ transient on save."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added dlm_download_headers filter."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added dlm_get_template_part filter."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fallback for JSON_UNESCAPED_UNICODE to fix accented characters on &lt; PHP 5.4."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed default orderby for downloads shortcode to date, desc."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "JSON_UNESCAPED_UNICODE for files to fix unicode chars when json encoded. Fix needs PHP 5.4+ to work, but won't break lower versions."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Style filetype-docx"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update get_version_id to work with non-numeric versions."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix shortcode arg booleans."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add transient cache for get_file_version_ids."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved all translations to Transifex - https://www.transifex.com/projects/p/download-monitor/"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Changed text domain from download_monitor to download-monitor."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Grunt."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added options to generate file hashes DISABLED BY DEFAULT as they can cause performance issues with large files."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Use home_dir instead of site_dir - fixes hot-linking protections against own site (when not in root dir)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Replace hardcoded WP_CONTENT_DIR and WP_CONTENT_URL with wp_upload_dir to work when UPLOADS and UPLOADS_URL constants are set."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added some filters for hotlink protection customisation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add password form to download page when required"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Run shortcodes in excerpt/short desc"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Various hook additions"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "pr_br and zh_cn translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Sort download count by meta_value_num"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Store URLs in JSON format to allow easier search/replace"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix dashboard sorting"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Option for basic referer checking to prevent hotlinking."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Only get file hashes on save as they are resource heavy."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Disable remote file hash generation, but can be enabled with filter dlm_allow_remote_hash_file"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Radio buttons instead of select (with pagination) in popup to improve performance."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix for site_url -&gt; abspath"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Check if hash functions are supported before use."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix file_exists error in download handlers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "MP6/3.8 admin styling. Requires 3.8."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Polish translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Turkish translation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Change capability required to view dashboard widget."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Don't show \"insert download\" when editing a download."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Allow pagination for the [downloads] shortcode. Simply add paginate=true to the shortcode."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Reverted flush change in download handler to reduce memory usage on some hosting envrionments"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "changed download handlers and fixed corruption when resuming files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Calculate md5/sha1/crc32 hashes for files. Obtainable via methods or download_data, e.g. [download_data id=\"86\" data=\"md5\"]"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added file_date data"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Cleaned up log table queries"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweaked download handler headers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweaked logging"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Limit UA to 200"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Setcookie to prevent double logging"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Addons page (disable using add_filter( 'dlm_show_addons_page', '__return_false' ); )"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added some new hooks"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FR and SR_RS updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix 0kb downloads in some hosting enviroments"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added button to delete logs"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed log page when no logs are present"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "FR and HU updates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added dropdown for the default template option to make available templates more obvious"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added version-list and title templates"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Option to redirect to files only (do not force)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed textdomains"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "HU translation by Győző Farkas"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix dlm_upload folder when not using month/day upload folders."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix IP lookup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Resumable download support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweaked download handler"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "HTTPS headers for IE fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Italian locale"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Specify error statuses on wp_die messages e.g. 404 for missing files."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Moved DONOTCACHEPAGE"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed admin notices"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added download link to admin 'file' column for copying and pasting"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Farsi localisation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Wrapping content in a [download] shortcode will wrap it in a simple link."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Hide taxonomies from nav menus"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix categories in download_data method."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "When do_not_force is enabled, still replace abspath with home_url"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Exclude dlm_download from search and disable query var"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added category_include_children option for downloads shortcode"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed logs time offset."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak admin page detection to work when no downloads exist."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix dashboard widget warning."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add filters to logs and export csv function."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added extra columns to CSV."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix config page to work with multibyte tab names."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Japanese locale by hide92795"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Admin CSS/script conditonally loaded"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Versions are now strtolower to be compatible with version_compare and to standardise numbers."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Only use wp_remote_head to get fielsize on remote files. Prevents timeouts when a file doesn't exist."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "If a filesize cannot be found, set to -1 to prevent re-tries."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Insert button added to all CPT except downloads."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "French locale by Jean-Michel MEYER."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update blockui"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Workaround root relative URLS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Complete rewrite of the plugin making use of custom post types and other best practices. Fresh start version '1' to prevent auto-updates (legacy importer needs to be used to migrate from old versions)."
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I upload .xxx filetype using the uploader?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I link to external downloads?"
+msgstr ""
+
+#. Found in faq header.
+msgid "My Download links 404"
+msgstr ""
+
+#. Found in faq header.
+msgid "Download counts are not increasing when I download something"
+msgstr ""
+
+#. Found in faq header.
+msgid "I used this before, so why is this version 1?"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Images - .jpg, .jpeg, .png, .gif"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Documents - .pdf, .doc, .docx, .ppt, .pptx, .pps, .ppsx, .odt, .xls, .xlsx"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Music - .mp3, .m4a, .ogg, .wav"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Video - .mp4, .m4v, .mov, .wmv, .avi, .mpg, .ogv, .3gp, .3g2"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Download Monitor uses the WordPress uploader for uploading files. By default these formats are supported:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "To add more you can use a plugin, or filters. This post is a good resource for doing it with filters: <a href=\"http://www.paulund.co.uk/change-wordpress-upload-mime-types\">Change WordPress Upload Mime Types</a>."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, you can use both local paths and external URLs."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Download links are powered by endpoints. If you find them 404'ing, go to Settings &gt; Permalinks and save. This will flush the permalinks and allow our endpoints to be added."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Admin hits are not counted, log out and try!"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Version 1.0.0 is a fresh start/complete rewrite of the legacy 3.0 version using modern best-practices such as custom post types and endpoints. Because of this, data from the legacy plugin won't work without migration using <a href=\"https://www.download-monitor.com/extensions/dlm-legacy-importer/\">the legacy importer</a>. Since this upgrade process isn't straightforward nor automated I've reverted the version to 1.0.0 to prevent automatic updates."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "More documentation can be found in our <a href=\"https://www.download-monitor.com/kb/\">Knowledge Base</a>."
+msgstr ""
