@@ -195,6 +195,7 @@ function get_id_by_slug($page_slug) {
 	}
 }
 
+// gets the slug of the parent
 function the_parent_slug() {
 	global $post;
 	if($post->post_parent == 0) return '';

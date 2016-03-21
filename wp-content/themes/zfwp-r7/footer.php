@@ -87,7 +87,6 @@ $the_post_type = get_post_type( $post_ID  );
 
 <?php wp_footer(); ?>
 
-
 <script>
 	$(document).foundation();
 </script>
