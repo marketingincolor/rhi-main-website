@@ -1,11 +1,12 @@
 === Download Monitor ===
-Contributors: never5, barrykooij, mikejolley
+Contributors: never5, barrykooij, mikejolley, hchouhan
 Donate link: http://www.barrykooij.com/donate/
 Tags: download, downloads, monitor, hits, download monitor, tracking, admin, count, counter, files, versions, download count, logging, AJAX, digital, documents, download category, download manager, download template, downloadmanager, file manager, file tree, grid, hits, ip-address, manager, media, monitor, password, protect downloads, tracker
 Requires at least: 3.8
-Tested up to: 4.4
-Stable tag: 1.9.1
+Tested up to: 4.7.4
+Stable tag: 1.9.7
 License: GPLv3
+Text Domain: -
 
 Download Monitor is a plugin for uploading and managing downloads, tracking downloads, and displaying links.
 
@@ -36,8 +37,19 @@ Download Monitor provides an interface for uploading and managing downloadable f
 > Want to see more? [Browse All Extensions](https://www.download-monitor.com/extensions/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-block-browse-all)
 
 = Documentation =
+We have a large Knowledge Base on our [Download Monitor website](https://www.download-monitor.com/kb/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation) that contains documentation about how to how to setup and use Download Monitor.
 
-Documentation can be found on the [Download Monitor website](https://www.download-monitor.com/documentation/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation).
+Are you a new Download Monitor user? Read these articles on how to get your files ready for download with Download Monitor:
+
+1. [How to install Download Monitor](https://www.download-monitor.com/kb/installation/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
+2. [How to add your first download in Download Monitor](https://www.download-monitor.com/kb/adding-downloads/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
+3. [How to list your first download on your website with the download shortcode](https://www.download-monitor.com/kb/shortcode-download/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
+
+More advanced topics that a lot of people find interesting:
+
+1. [Learn more about the different ways you can style your download buttons](https://www.download-monitor.com/kb/content-templates/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
+2. [Learn more about how to customize your download buttons](https://www.download-monitor.com/kb/overriding-content-templates/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
+3. [Learn more about what actions and filters are available in Download Monitor](https://www.download-monitor.com/kb/action-and-filter-reference/?utm_source=wp-plugin-repo&utm_medium=link&utm_campaign=description-documentation)
 
 = Contributing and reporting bugs =
 
@@ -106,6 +118,46 @@ More documentation can be found in our [Knowledge Base](https://www.download-mon
 4. Display regular download links or fancy ones all using shortcodes and templates.
 
 == Changelog ==
+
+= 1.9.7: May 5, 2017 =
+* Tweak: Added capability checks to log export and delete functionality. Props [Pritect](http://www.pritect.net/).
+* Tweak: We're now redirecting users to home on empty download request. Behavior can be changed via filters. See https://www.download-monitor.com/kb/empty-download-request-redirection/
+
+= 1.9.6: February 28, 2017 =
+* Tweak: Fix display for unknown user in exported log, props [Matt Mower](https://github.com/mdmower).
+* Tweak: Settings screen hash tweaks.
+* Tweak: Display correct tab on settings save, props [Matt Mower](https://github.com/mdmower).
+* Tweak: Fixed issue with some dismissible notices.
+* Tweak: Add Portuguese (pt_PT) translation, props [Pedro Mendonça](https://github.com/pedro-mendonca).
+* Tweak: Included various language tweaks via Transifex. Help out over at [Transifex](https://www.transifex.com/barrykooijplugins/download-monitor/).
+
+= 1.9.5: August 23, 2016 =
+* Tweak: Fixed a bug where Download Options couldn't be checked off in quick edit.
+* Tweak: Updated settings screen description for custom templates.
+* Tweak: Download Information input fields are now readonly since these fields are informational only. Props [kraftner](https://github.com/kraftner).
+* Tweak: Removed code that triggered PHP7 incompatibility false positives in PHP7 compatibility scans.
+* Tweak: Removed old JSON library since default JSON functions are available from PHP 5.2 and up.
+
+= 1.9.4: May 2, 2016 =
+* Tweak: Various cookie tweaks to prevent incorrect double logging entries.
+* Tweak: Added a Cookie Manager class to centralize cookie related tasks.
+
+= 1.9.3: April 11, 2016 =
+* Tweak: Small rework of [downloads] loop. Downloads now filterable per download via dlm_shortcode_downloads_loop_download.
+* Tweak: We now report missing versions for removed downloads in logs, props [Matt Mower](https://github.com/mdmower).
+* Tweak: Updated Danish translation, props [Georg Adamsen](https://github.com/GSAdev).
+
+= 1.9.2: March 27, 2016 =
+* Tweak: Fixed bug where 'version' and 'version_id' were ignored in [download].
+* Tweak: Fixed a bug that caused the file upload overlay to append file URL to wrong version, props [kraftner](https://github.com/kraftner).
+* Tweak: Optimized [download] shortcode code.
+* Tweak: Flush rewrites in admin settings on shutdown instead of during page load, props [sybrew](https://github.com/sybrew).
+* Tweak: Added extra checks to blacklist checks to prevent stristr empty needle notices, props [Matt Mower](https://github.com/mdmower).
+* Tweak: Removed DS_Store backups, props [Matt Mower](https://github.com/mdmower).
+* Tweak: Added Ukrainian translation, props [Fremler](https://www.transifex.com/user/profile/Fremler/).
+* Tweak: Added Croatian translation, props [molekula](https://www.transifex.com/user/profile/molekula/).
+* Tweak: Updated Dutch translation.
+* Tweak: Updated Portuguese (Brazil) translation.
 
 = 1.9.1: December 1, 2015 =
 * Tweak: Check if $visitor_ua isn't empty to prevent stristr warnings.

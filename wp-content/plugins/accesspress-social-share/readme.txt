@@ -1,16 +1,18 @@
-﻿=== AccessPress Social Share ===
+﻿=== Social Share WordPress Plugin - AccessPress Social Share ===
 Contributors: Access Keys
 Tags: social share counter, social share, social media share, social network share, social media, social network, share counter, social share count, social url share, social icons
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
-Tested up to: 4.4
-Stable tag: 4.0.6
+Tested up to: 4.8
+Stable tag: 4.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Share your site urls in most popular social medias and show share counts on your website with various designs.
 
 == Description ==
+[Homepage](https://accesspressthemes.com/) | [Documentation](https://accesspressthemes.com/documentation/documentation-plugin-instruction-accesspress-social-share/) | [Support](https://accesspressthemes.com/support) | [Demo](http://demo.accesspressthemes.com/wordpress-plugins/accesspress-social-share/) | [Premium Version](https://accesspressthemes.com/wordpress-plugins/accesspress-social-pro/)
+
 <strong>AccessPress Social Share</strong> is a <strong>Free WordPress plugin</strong> to allow anyone easily share website content (page, posts, image, media) on major social media (Facebook, Twitter, Google+, Pinterest, LinkedIn and Digg ) by the use of the latest APIs on your website!
 
 A perfect plugin to make any content on your website social-share-friendly, and increase your social reach dramatically!
@@ -24,6 +26,14 @@ Just get it done in a few minutes!
 `For more options - more social media integration, more themes, floating
 sidebar options, widget options, more shortcode options. Pinterest pin
 it button for each images. Please upgrade to Premium version.`
+
+`Have you moved your site from HTTP to HTTPS and lost your share counts?
+No worries! Now you can get your http site's share counts back using our
+plugin.
+<strong>Note: If you have set 301 redirects in your site the facebook share 
+counts may reset</strong>
+`
+
 
 = Free Features: =
 
@@ -44,6 +54,8 @@ it button for each images. Please upgrade to Premium version.`
         - Dedicated email, forum support.
 * <strong>Free updates</strong>
         - Get free updates for lifetime.
+
+[youtube https://www.youtube.com/watch?v=PKUbaeKpsbM&feature=youtu.be]
 
 = Premium Features: =
 
@@ -96,6 +108,8 @@ For complete information and documentation regarding plugin, please visit below 
 
 [Demo](http://demo.accesspressthemes.com/wordpress-plugins/accesspress-social-share/)
 
+[More WordPress Resources](http://wpall.club/)
+
 == Installation ==
 1. Unzip accesspress-social-share.zip
 2. Upload all the files to the /wp-content/plugins/accesspress-social-share
@@ -131,6 +145,103 @@ Yes. You can use the AccessPress social share by using shortcode anywhere you wa
 6. Backend Miscellaneous Settings Section
 
 == Changelog ==
+= 4.3.4 =
+* Checked plugin compactibility with wordpress version 4.8
+* Added the fontawesome icons locally to the plugin's folder.
+
+= 4.3.3 =
+* Done the bug fixings for the AMP version removed the share icons from the amp version pages.
+* Updated the fontawesome icons version to 4.7.0
+
+= 4.3.2 =
+* Done the bug fixings for the facebook share counts using access token.
+
+= 4.3.1 =
+* Done the bug fixings for the double addition of the counter for canonical URLs.
+
+= 4.3.0 =
+* Done small bug fixing for the frontend css issue for the anchor links.
+* Done the bug fixing for the cache issue of the facebook share counts.
+
+= 4.2.9 =
+* Addition of do_action hooks to make users add more social networks if they need it. You can use add_action using these tags for 'apss_more_networks' in content and 'apss_more_networks_in_shortcodes' for shortcode.
+
+= 4.2.8 =
+* Done the bug fixings for the url encoding issue for the linkedin share summary text.
+
+= 4.2.7 =
+* Done the url, title and summary parameter url encoded for linkedin as it is producing error in some IE version of a browser.
+
+= 4.2.6 =
+* Fixed css issues for the plugin's backend settings - miscelleneous settings of the plugin.
+
+= 4.2.5 =
+* Checked plugin compactibility with wordpress version 4.7
+
+= 4.2.4 =
+* Removed unnecessary codes from plugin's main file.
+
+= 4.2.3 =
+* Made the plugin object global to remove the content filter hook by other.
+
+= 4.2.2 =
+* Done the css modifications for the miscelleneous setting's facebook APP settings.
+
+= 4.2.1 =
+* Done the bug fixings for the slashes appearing in the plugin's miscelleneous settings.
+
+= 4.2.0 =
+* Done the addition of new feature to fetch the share counts from http site as well if site has been moved from HTTP to HTTPS.
+* Done the addition of documentation links in how to use section.
+
+= 4.1.9 =
+* Done the bug fixing for the theme 3 for the mobile displays.
+* Done the bug fixing for the content share for the linkedin.
+* Addition of link to create facebook app in the plugins miscelleneous settings.
+* Addition of the More WordPress Resources link.
+
+= 4.1.8 =
+* Improved the facebook share counter using the facebook app. Now the user need to create facebook app to fetch share counts if old method is not working.
+
+= 4.1.7 =
+* Fixed the facebook share count issue.
+
+= 4.1.6 =
+* Fixed the twitter multiple popup issue.
+* Removed the dublicate css for the share text css from the frontend css. 
+
+= 4.1.5 =
+* Multisite compactibility issue fixed.
+
+= 4.1.4 =
+* Removal of unnecessary css codes from the plugin's frontend css file.
+
+= 4.1.3 =
+* Removed unnecessary codes from count shortcode.
+* Done the bug fixings for the popup share issue for facebook and linkedin.
+
+= 4.1.2 =
+* Changed the priority of the_content filter to make the plugin compactible with "Advanced Ads" plugin.
+* Updated the 'apss_count' shortcode to support multiple networks. Please see "how to use" tab for more information.
+
+= 4.1.1 =
+* Added options to disable the cache for the url share counts.
+* Added an option to enable the social share in popup window.
+
+= 4.1.0 =
+* Done the addition of additional parameter custom_share_link in the shortcode for apss_share.
+* Added the note section for the available parameters in email settings.
+
+= 4.0.9 =
+* Done the bug fixing for the backend options.
+
+= 4.0.8 =
+* Done the bug fixing for the issue related to the_content filter hook for Yoast SEO plugin.
+
+= 4.0.7 =
+* Removal of unnecessary codes for the twitter share counts using third party API.
+* Addition of language file for fr_CA
+
 = 4.0.6 =
 * Addition of note section for the new twitter share count options.
 

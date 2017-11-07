@@ -7,6 +7,7 @@ jQuery('.'+args).html('');
         //all backend js goes here
         //sortable initialization
         $('.apps-opt-wrap').sortable({
+            axis: 'y',
             containment: "parent",
             update:function(event,ui){
                         var profile_array = [];

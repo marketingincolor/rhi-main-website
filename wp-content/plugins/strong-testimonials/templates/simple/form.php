@@ -4,28 +4,29 @@
  * Description: A simple form template.
  */
 ?>
-<!-- Strong Testimonials: Simple Form Template -->
-<div class="strong-view strong-form simple-form <?php wpmtst_container_class(); ?>">
+<div class="strong-view strong-form <?php wpmtst_container_class(); ?>"<?php wpmtst_container_data(); ?>>
 
 	<div id="wpmtst-form">
 
-		<p class="required-notice">
-			<span class="required symbol"></span><?php wpmtst_form_message( 'required-field' ); ?>
-		</p>
+        <div class="strong-form-inner">
 
-		<form <?php wpmtst_form_info(); ?>>
+	        <?php wpmtst_field_required_notice(); ?>
 
-			<?php wpmtst_form_setup(); ?>
+            <form <?php wpmtst_form_info(); ?>>
 
-			<?php do_action( 'wpmtst_form_before_fields' ); ?>
+                <?php wpmtst_form_setup(); ?>
 
-			<?php wpmtst_all_form_fields(); ?>
+                <?php do_action( 'wpmtst_form_before_fields' ); ?>
 
-			<?php do_action( 'wpmtst_form_after_fields' ); ?>
+                <?php wpmtst_all_form_fields(); ?>
 
-			<?php wpmtst_form_submit_button(); ?>
+                <?php do_action( 'wpmtst_form_after_fields' ); ?>
 
-		</form>
+                <?php wpmtst_form_submit_button(); ?>
+
+            </form>
+
+        </div>
 
 	</div>
 

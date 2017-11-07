@@ -1,6 +1,6 @@
-<?php defined( 'ABSPATH' ) or die( "No script kiddies please!" ); ?>
-<?php
+<?php defined( 'ABSPATH' ) or die( "No script kiddies please!" );
 $apss_link_open_option = ($options['dialog_box_options'] == '1') ? "_blank" : "";
+$apss_link_open_option_value = intval($options['dialog_box_options']);
 $twitter_user = $options['twitter_username'];
 $counter_enable_options = $options['counter_enable_options'];
 if(isset($options['twitter_counter_api'])){
@@ -19,6 +19,16 @@ if ( isset( $options['total_counter_enable_options'] ) ) {
 } else {
 	$enable_counter = 0;
 }
+
+if(isset($options['enable_http_count'])){
+	if ( $options['enable_http_count'] == '1' ) {
+		$http_url_checked = 1;
+	}else{
+		$http_url_checked = 0;
+	}
+}else {
+	$http_url_checked = 0;
+}
 ?>
 
 
@@ -30,15 +40,55 @@ $total_count = 0;
 foreach ( $options['social_networks'] as $key => $value ) {
 	if ( intval( $value ) == '1' ) {
 		$count = $this->get_count( $key, $url );
+		////////////////////////////////////////
+		if(isset($http_url_checked) && $http_url_checked=='1'){
+			$url_check = parse_url($url);
+			if($url_check['scheme'] == 'https'){
+				$flag=TRUE;
+			}else{
+				$flag=FALSE;
+			}
+
+			if($flag == TRUE){
+			    $url1 = APSS_Class:: get_http_url($url);
+			    $http_count = APSS_Class:: get_count($key, $url1);
+			    if($count != $http_count){
+			    	$count += $http_count;
+			    }else{
+			    	$count = $count;
+			    }
+			}
+		}
+		///////////////////////////////////////////
 		$total_count += $count;
 		switch ( $key ) {
 			//counter available for facebook
 			case 'facebook':
 				$link = 'https://www.facebook.com/sharer/sharer.php?u=' . $url;
 				$count = $this->get_count( $key, $url );
+				////////////////////////////////////////
+				if(isset($http_url_checked) && $http_url_checked=='1'){
+					$url_check = parse_url($url);
+					if($url_check['scheme'] == 'https'){
+						$flag=TRUE;
+					}else{
+						$flag=FALSE;
+					}
+					if($flag == TRUE){
+					    $url1 = APSS_Class:: get_http_url($url);
+					    $http_count = APSS_Class:: get_count($key, $url1);
+					    if($count != $http_count){
+					    	$count += $http_count;
+					    }else{
+					    	$count = $count;
+					    }
+					}
+				}
+				///////////////////////////////////////////
+
 				?>
 				<div class='apss-facebook apss-single-icon'>
-					<a rel='nofollow' title="<?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-facebook'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?></span>
@@ -61,9 +111,29 @@ foreach ( $options['social_networks'] as $key => $value ) {
 				}
 				$link = "https://twitter.com/intent/tweet?text=$title&amp;url=$url_twitter&amp;$twitter_user";
 				$count = $this->get_count( $key, $url );
+				////////////////////////////////////////
+				if(isset($http_url_checked) && $http_url_checked=='1'){
+					$url_check = parse_url($url);
+					if($url_check['scheme'] == 'https'){
+						$flag=TRUE;
+					}else{
+						$flag=FALSE;
+					}
+
+					if($flag == TRUE){
+					    $url1 = APSS_Class:: get_http_url($url);
+					    $http_count = APSS_Class:: get_count($key, $url1);
+					    if($count != $http_count){
+					    	$count += $http_count;
+					    }else{
+					    	$count = $count;
+					    }
+					}
+				}
+				///////////////////////////////////////////
 				?>
 				<div class='apss-twitter apss-single-icon'>
-					<a rel='nofollow' title="<?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href="<?php echo $link; ?>">
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" href='javascript:void(0);' <?php }else{ ?> href="<?php echo $link; ?>" <?php } ?> title="<?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-twitter'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?></span><span class='apss-share'><?php _e( 'Tweet', 'accesspress-social-share' ); ?></span>
@@ -80,9 +150,29 @@ foreach ( $options['social_networks'] as $key => $value ) {
 			case 'google-plus':
 				$link = 'https://plus.google.com/share?url=' . $url;
 				$count = $this->get_count( $key, $url );
+				////////////////////////////////////////
+				if(isset($http_url_checked) && $http_url_checked=='1'){
+					$url_check = parse_url($url);
+					if($url_check['scheme'] == 'https'){
+						$flag=TRUE;
+					}else{
+						$flag=FALSE;
+					}
+
+					if($flag == TRUE){
+					    $url1 = APSS_Class:: get_http_url($url);
+					    $http_count = APSS_Class:: get_count($key, $url1);
+					    if($count != $http_count){
+					    	$count += $http_count;
+					    }else{
+					    	$count = $count;
+					    }
+					}
+				}
+				///////////////////////////////////////////
 				?>
 				<div class='apss-google-plus apss-single-icon'>
-					<a rel='nofollow' title="<?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-google-plus'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?></span>
@@ -99,6 +189,26 @@ foreach ( $options['social_networks'] as $key => $value ) {
 			//counter available for pinterest
 			case 'pinterest':
 				$count = $this->get_count( $key, $url );
+				////////////////////////////////////////
+				if(isset($http_url_checked) && $http_url_checked=='1'){
+					$url_check = parse_url($url);
+					if($url_check['scheme'] == 'https'){
+						$flag=TRUE;
+					}else{
+						$flag=FALSE;
+					}
+
+					if($flag == TRUE){
+					    $url1 = APSS_Class:: get_http_url($url);
+					    $http_count = APSS_Class:: get_count($key, $url1);
+					    if($count != $http_count){
+					    	$count += $http_count;
+					    }else{
+					    	$count = $count;
+					    }
+					}
+				}
+				///////////////////////////////////////////
 				?>
 
 				<div class='apss-pinterest apss-single-icon'>
@@ -121,10 +231,30 @@ foreach ( $options['social_networks'] as $key => $value ) {
 			case 'linkedin':
 				$link = "http://www.linkedin.com/shareArticle?mini=true&amp;title=" . $title . "&amp;url=" . $url . "&amp;summary=" . $excerpt;
 				$count = $this->get_count( $key, $url );
+				////////////////////////////////////////
+				if(isset($http_url_checked) && $http_url_checked=='1'){
+					$url_check = parse_url($url);
+					if($url_check['scheme'] == 'https'){
+						$flag=TRUE;
+					}else{
+						$flag=FALSE;
+					}
+
+					if($flag == TRUE){
+					    $url1 = APSS_Class:: get_http_url($url);
+					    $http_count = APSS_Class:: get_count($key, $url1);
+					    if($count != $http_count){
+					    	$count += $http_count;
+					    }else{
+					    	$count = $count;
+					    }
+					}
+				}
+				///////////////////////////////////////////
 				?>
 
 				<div class='apss-linkedin apss-single-icon'>
-					<a rel='nofollow' title="<?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'><i class='fa fa-linkedin'></i>
 							<span class='apss-social-text'><?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?></span>
 							<span class='apss-share'><?php _e( 'Share', 'accesspress-social-share' ); ?></span>
@@ -142,7 +272,7 @@ foreach ( $options['social_networks'] as $key => $value ) {
 				$link = "http://digg.com/submit?phase=2%20&amp;url=" . $url . "&amp;title=" . $title;
 				?>
 				<div class='apss-digg apss-single-icon'>
-					<a rel='nofollow' title="<?php _e( 'Share on Digg', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Digg', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-digg'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Digg', 'accesspress-social-share' ); ?></span>
@@ -190,6 +320,9 @@ foreach ( $options['social_networks'] as $key => $value ) {
 		}
 	}
 }
+
+do_action('apss_more_networks');
+
 if ( isset( $enable_counter ) && $enable_counter == '1' ) {
 	?>
 	<div class='apss-total-share-count'>

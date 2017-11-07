@@ -230,7 +230,9 @@ function r7_login_redirect( $redirect_to, $request, $user  ) {
 			$redirect_to = site_url('/franchisor/scout-mollys/');
 		} elseif( $user->has_cap( 'fran_sgr' ) ) {
 			$redirect_to = site_url('/franchisor/storm-guard-restoration');
-		} else {
+		} elseif( $user->has_cap( 'fran_dbs' ) ) {
+			$redirect_to = site_url('/franchisor/diesel-barbershop');
+		}else {
 			$redirect_to = home_url();
 		}
 	}

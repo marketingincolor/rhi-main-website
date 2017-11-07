@@ -1,4 +1,4 @@
-/*accesspress social shares front end css*/
+/* Accesspress social shares - frontend css */
 
 @font-face {
   font-family: 'MyriadPro-Regular';
@@ -13,9 +13,7 @@
 .clearfix:after, .clearfix:before{ clear:both; }
 .clearfix{*zoom:1}
 
-/**{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}*/
-
-a:hover, a:focus {
+.apss-social-share a:hover, .apss-social-share a:focus {
     color: #636363;
 }
 
@@ -39,30 +37,21 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-/*
-//share icons to align center
-.apss-social-share {
-text-align: center;
+.apss-social-share a {
+    text-decoration:none;
 }
 
-.apss-single-icon {
-  display: inline-block;
-}
-
-///////////////////////////////
-*/
-
-  .apss-total-share-count{
- 
-        display: inline-block;
+.apss-total-share-count{
+    display: inline-block;
     vertical-align: top;
     margin-top: 4px;
 }
 
-  .apss-count-number{    
+.apss-count-number{
     font-size: 28px;
     display: inline-block;
-    vertical-align: top;}
+    vertical-align: top;
+}
 
   .apss-total-shares{    display: inline-block;
     font-size: 13px;
@@ -935,16 +924,6 @@ text-align: center;
 	display:none;
 }
 
-.apss-share-text{
-  opacity: 0.4;
-  line-height: 16px;
-  color: #333;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  margin-left: 9px;
-}
-
-
 
 /**********************************************THEME 6 CSS ************************************************************/
 
@@ -1103,6 +1082,10 @@ text-align: center;
     display:none;
 }
 
+
+/* ********************************************theme 6 ends ******************************************************** */
+
+
 .apss-share-text{
   opacity: 0.4;
   line-height: 16px;
@@ -1113,8 +1096,6 @@ text-align: center;
 }
 
 
-
-
 /************************************************responsive*************************************************************/
 
 
@@ -1122,7 +1103,7 @@ text-align: center;
 
 .apss-theme-3 .apss-single-icon {
     display: inline-block;
-    width: 50%;
+    /*width: 50%;*/
 }
 }
 
@@ -1130,7 +1111,7 @@ text-align: center;
 
 .apss-theme-3 .apss-single-icon {
     display: inline-block;
-    width: 100%;
+    /*width: 100%;*/
     clear: both;
 }
 

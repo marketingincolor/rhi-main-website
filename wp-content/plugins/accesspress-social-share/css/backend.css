@@ -1,4 +1,4 @@
-/*accesspress social shares backend css*/
+/* Accesspress social shares - backend css */
 .clearfix:after, .clearfix:before{ display:table; content:""}
 .clearfix:after{ clear:both};
 .clearfix{*zoom:1}
@@ -71,7 +71,8 @@
 
 .apss-wrapper {
     background-color: #fff;
-    float: none;
+    float: left;
+    width: 65%;
     margin: 0;
     padding: 20px;
     border-top: 1px solid #fff;
@@ -92,7 +93,7 @@
 }
 
 .apss-wrapper-block {
-    width: 833px;
+    width: 98%;
     padding: 20px 0;
     float:left;
 }
@@ -173,7 +174,7 @@
     display: block;
     float: left;
     padding: 0 20px;
-    width: 72%;
+    width: auto;
 }
 
 
@@ -390,4 +391,20 @@
 
 .apss-counter-api-options.apss-counter-settings.clearfix {
     margin-top: 10px !important;
+}
+
+.apps-opt-wrap .apss-option-wrapper label input[type="checkbox"] {
+    float: right;
+    margin-top: 5px;
+}
+
+.apss_input_wrapper {
+    position: relative;
+    padding-left: 160px;
+}
+
+.apss_input_wrapper label {
+    position: absolute;
+    left: 0;
+    top: 5px;
 }

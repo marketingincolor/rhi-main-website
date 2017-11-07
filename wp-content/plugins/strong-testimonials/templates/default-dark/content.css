@@ -28,11 +28,15 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 -----------------------------------------------*/
 .strong-view.default-dark {
   display: block;
-  /* this handles short content */
+  /* setting a width handles short content */
   width: 100%;
 }
 .strong-view.default-dark * {
   box-sizing: border-box;
+}
+.strong-view.default-dark .testimonial.t-slide {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .strong-view.default-dark .testimonial-inner {
   display: block;
@@ -40,14 +44,22 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   width: 100%;
   height: 100%;
 }
-.strong-view.default-dark .strong_cycle .testimonial {
-  /* remove margin in slideshow */
-  margin-top: 0;
-  margin-bottom: 0;
+.strong-view.default-dark .testimonial-image {
+  max-width: 100%;
 }
-.strong-view.default-dark .strong_cycle .testimonial:not(:first-child) {
-  /* prevents flash on slow page load */
-  display: none;
+.strong-view.default-dark .testimonial-field-before {
+  margin-right: 0.5em;
+}
+
+.strong-view .screen-reader-text {
+  /* copied from Twenty Sixteen theme */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  /* many screen reader and browser combinations announce broken words as they would appear visually */
+  word-wrap: normal !important;
 }
 
 /* Paging controls
@@ -70,9 +82,11 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   padding: 0;
 }
 .strong-view ul.simplePagerNav li a {
-  padding: 0.1em 0.3em;
   margin: 0 0.2em;
+  padding: 0.1em 0.3em;
+  outline: none;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 .strong-view ul.simplePagerNav li a:hover {
   background: #BBB;
@@ -88,10 +102,51 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   float: right;
 }
 
+/* Paging controls
+-----------------------------------------------*/
+.standard-pagination {
+  /* match .strong-content container */
+  margin: 20px auto;
+  text-align: center;
+}
+
+.strong-view ul.page-numbers {
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+}
+.strong-view ul.page-numbers li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.strong-view ul.page-numbers li span, .strong-view ul.page-numbers li a {
+  margin: 0 0.2em;
+  padding: 0.1em 0.3em;
+}
+.strong-view ul.page-numbers li a {
+  outline: none;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.strong-view ul.page-numbers li a:hover {
+  background: #BBB;
+  color: #FFF;
+}
+.strong-view ul.page-numbers li span.current {
+  background: #999;
+  color: #FFF;
+}
+
+.strong-view.rtl ul.page-numbers li {
+  float: right;
+}
+
 /* Template
 -----------------------------------------------*/
 .strong-view.default-dark .strong-content {
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 .strong-view.default-dark .testimonial {
   margin: 20px auto;
@@ -135,6 +190,11 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   background: none repeat scroll 0 0 #FFFFFF;
   border: 1px solid #EFEFEF;
   padding: 6px;
+  margin: 0 auto;
+}
+.strong-view.default-dark .testimonial-image a {
+  text-decoration: none;
+  box-shadow: none;
 }
 .strong-view.default-dark .testimonial-client {
   margin-top: 1em;
@@ -145,6 +205,40 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 }
 .strong-view.default-dark .readmore {
   margin-top: 1em;
+}
+.strong-view.default-dark .strong-view-footer {
+  margin-bottom: 20px;
+}
+.strong-view.default-dark .readmore-page {
+  margin-top: 20px;
+  padding: 1em;
+  text-align: center;
+  border: 2px solid #777;
+}
+
+/* Slideshow
+-----------------------------------------------*/
+.strong-view.default-dark.slider-container {
+  /* If vertical or fade slideshow, move border from individual testimonials to viewport. */
+}
+.strong-view.default-dark.slider-container.slider-adaptive:not(.slider-mode-horizontal) .wpmslider-viewport {
+  border: 1px solid #E6E6E6;
+}
+.strong-view.default-dark.slider-container.slider-adaptive:not(.slider-mode-horizontal) .testimonial {
+  border: 0;
+}
+.strong-view.default-dark.slider-container .strong-content {
+  margin: 0 auto;
+}
+.strong-view.default-dark.slider-container .testimonial:not(:first-child) {
+  display: none;
+}
+.strong-view.default-dark.nav-position-inside .testimonial-inner {
+  padding-bottom: 48px;
+}
+.strong-view.default-dark.controls-type-sides .testimonial-inner {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Template variant overrides
@@ -167,6 +261,7 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
     margin-right: auto;
   }
 }
+/* Remove quote background image */
 @media only screen and (max-width: 320px) and (orientation: portrait) {
   .strong-view.default-dark .testimonial-heading {
     background: none;
@@ -186,4 +281,9 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 }
 .strong-view.default-dark.rtl .testimonial-client {
   text-align: left;
+}
+
+.strong-view.default-dark.rtl .testimonial-heading {
+  padding-right: 40px;
+  background-position: right;
 }

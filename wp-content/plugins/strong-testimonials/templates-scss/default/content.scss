@@ -8,13 +8,14 @@ $template: default;
 
 @import "../_partials/clear";
 @import "../_partials/base";
-@import "../_partials/pagination";
+@import "../_partials/pagination-simple";
+@import "../_partials/pagination-standard";
 
 /* Template
 -----------------------------------------------*/
 .strong-view.#{$template} {
 	.strong-content {
-		margin: 20px auto;
+		margin: 20px auto 0;
 	}
 
 	.testimonial {
@@ -29,6 +30,7 @@ $template: default;
 	}
 
 	.testimonial-heading {
+		//noinspection CssUnknownTarget
 		background: url("img/quotes.png") no-repeat scroll left center transparent;
 		margin-top: 0;
 		padding-left: 40px;
@@ -51,6 +53,11 @@ $template: default;
 			padding: 6px;
 			margin: 0 auto;
 		}
+
+		a {
+			text-decoration: none;
+			box-shadow: none;
+		}
 	}
 
 	.testimonial-client {
@@ -65,13 +72,64 @@ $template: default;
 	.readmore {
 		margin-top: 1em;
 	}
+
+	.strong-view-footer {
+		margin-bottom: 20px;
+	}
+
+	.readmore-page {
+		@include readmore-page;
+		border: 1px solid #E6E6E6;
+	}
 }
 
+/* Slideshow
+-----------------------------------------------*/
+.strong-view.#{$template} {
+	&.slider-container {
+		/* If vertical or fade slideshow, move border from individual testimonials to viewport. */
+		&.slider-adaptive:not(.slider-mode-horizontal) {
+			.wpmslider-viewport {
+				border: 1px solid #E6E6E6;
+			}
+			.testimonial {
+				border: 0;
+			}
+		}
+		.strong-content {
+			margin: 0 auto;
+		}
+		.testimonial:not(:first-child) {
+			display: none;
+		}
+	}
+
+	&.nav-position-inside {
+		.testimonial-inner {
+			padding-bottom: 48px;
+		}
+	}
+
+	&.controls-type-sides .testimonial-inner {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	&.slider-stretch .testimonial-inner {
+		/* to force same height for all slides */
+		height: 100%;
+	}
+
+}
+
+/* Responsive
+-----------------------------------------------*/
 @import "../_partials/responsive";
 @import "../_partials/responsive-no-heading-background";
 
+/* RTL
+-----------------------------------------------*/
 @import "../_partials/rtl";
-
 .strong-view.#{$template}.rtl {
 	.testimonial-heading {
 		padding-right: 40px;

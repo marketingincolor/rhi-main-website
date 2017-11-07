@@ -24,11 +24,17 @@ $apss_share_settings['share_text'] = '';
 $apss_share_settings['twitter_username'] = '';
 $apss_share_settings['counter_enable_options'] = '0';
 $apss_share_settings['twitter_counter_api']    = '1';
+$apss_share_settings['api_configuration']['facebook'] =  array(
+                                                        'app_id'=> '',
+                                                        'app_secret'=>''
+                                                        );
 $apss_share_settings['total_counter_enable_options'] = '0';
+$apss_share_settings['enable_http_count'] = '0';
+$apss_share_settings['enable_cache'] = '1';
 $apss_share_settings['cache_period'] = '24';
 $apss_share_settings['apss_social_counts_transients'] = array();
 $apss_share_settings['dialog_box_options'] = '1';
-$apss_share_settings['footer_javascript'] = '1';
+// $apss_share_settings['footer_javascript'] = '1';
 $apss_share_settings['apss_email_subject'] = 'Please visit this link %%url%%';
 $apss_share_settings['apss_email_body'] = 'Hey Buddy!, I found this information for you: "%%title%%". Here is the website link: %%permalink%%. Thank you.';
 update_option( APSS_SETTING_NAME, $apss_share_settings );

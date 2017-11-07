@@ -12,6 +12,13 @@ class DLM_Admin {
 	private $settings;
 
 	/**
+	 * Variable indicating if rewrites need a flush
+	 *
+	 * @var bool
+	 */
+	private $need_rewrite_flush = false;
+
+	/**
 	 * Setup actions etc.
 	 */
 	public function setup() {
@@ -39,6 +46,8 @@ class DLM_Admin {
 		// Admin Footer Text
 		add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ), 1 );
 
+		// flush rewrite rules on shutdown
+		add_action( 'shutdown', array( $this, 'maybe_flush_rewrites' ) );
 	}
 
 	/**
@@ -150,7 +159,7 @@ class DLM_Admin {
 							'name'  => 'dlm_custom_template',
 							'std'   => '',
 							'label' => __( 'Custom Template', 'download-monitor' ),
-							'desc'  => __( 'Leaving this blank will use the default <code>content-download.php</code> template file. If you enter, for example, <code>image</code>, the <code>content-download-image.php</code> template will be used instead. You can add custom templates inside your theme folder.', 'download-monitor' )
+							'desc'  => __( 'Leaving this blank will use the default <code>content-download.php</code> template file. If you enter, for example, <code>button</code>, the <code>content-download-button.php</code> template will be used instead. You can add custom templates inside your theme folder.', 'download-monitor' )
 						),
 						array(
 							'name'     => 'dlm_xsendfile_enabled',
@@ -293,6 +302,7 @@ class DLM_Admin {
 	public function register_settings() {
 		$this->init_settings();
 
+		// register our options and settings
 		foreach ( $this->settings as $section ) {
 			foreach ( $section[1] as $option ) {
 				if ( isset( $option['std'] ) ) {
@@ -301,6 +311,11 @@ class DLM_Admin {
 				register_setting( 'download-monitor', $option['name'] );
 			}
 		}
+
+		// register option for tab navigation :: 'dlm_settings_tab_saved'
+		add_option( 'dlm_settings_tab_saved', 'general' );
+		register_setting( 'download-monitor', 'dlm_settings_tab_saved' );
+
 	}
 
 	/**
@@ -443,12 +458,17 @@ class DLM_Admin {
 					?>
 				</h2><br/>
 
+				<input type="hidden" id="setting-dlm_settings_tab_saved" name="dlm_settings_tab_saved" value="general" />
+
 				<?php
 
 				if ( ! empty( $_GET['settings-updated'] ) ) {
-
-					flush_rewrite_rules();
+					$this->need_rewrite_flush = true;
 					echo '<div class="updated notice is-dismissible"><p>' . __( 'Settings successfully saved', 'download-monitor' ) . '</p></div>';
+
+					$dlm_settings_tab_saved = get_option( 'dlm_settings_tab_saved', 'general' );
+
+					echo '<script type="text/javascript">var dlm_settings_tab_saved = "' . $dlm_settings_tab_saved . '";</script>';
 				}
 
 				foreach ( $this->settings as $key => $section ) {
@@ -580,6 +600,10 @@ class DLM_Admin {
 			return;
 		}
 
+		if ( ! current_user_can( 'manage_downloads' ) ) {
+			wp_die( "You're not allowed to delete logs." );
+		}
+
 		check_admin_referer( 'delete_logs' );
 
 		$wpdb->query( "DELETE FROM {$wpdb->download_log};" );
@@ -593,6 +617,10 @@ class DLM_Admin {
 
 		if ( empty( $_GET['dlm_download_logs'] ) ) {
 			return;
+		}
+
+		if ( ! current_user_can( 'manage_downloads' ) ) {
+			wp_die( "You're not allowed to export logs." );
 		}
 
 		$filter_status = isset( $_REQUEST['filter_status'] ) ? sanitize_text_field( $_REQUEST['filter_status'] ) : '';
@@ -655,6 +683,8 @@ class DLM_Admin {
 					$row[] = $user->user_email;
 				}
 
+				unset( $user );
+
 				$row[]  = $item->user_ip;
 				$row[]  = $item->user_agent;
 				$row[]  = $item->download_date;
@@ -712,5 +742,14 @@ class DLM_Admin {
 		}
 
 		return $footer_text;
+	}
+
+	/**
+	 * Maybe flush rewrite rules
+	 */
+	public function maybe_flush_rewrites() {
+		if ( true == $this->need_rewrite_flush ) {
+			flush_rewrite_rules();
+		}
 	}
 }

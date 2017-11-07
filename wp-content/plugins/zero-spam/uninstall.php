@@ -1,4 +1,12 @@
 <?php
+/**
+ * Uninstall
+ *
+ * Contains all plugin uninstall functionality.
+ *
+ * @package WordPress Zero Spam
+ * @since 1.0.0
+ */
 
 /**
  * Fired when the plugin is uninstalled.
@@ -19,7 +27,7 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @since 		1.5.0
+ * @since 1.5.0
  */
 
 // If this file is called directly, abort.
@@ -39,11 +47,11 @@ if ( basename(__DIR__) . '/zero-spam.php' !== WP_UNINSTALL_PLUGIN )  {
 }
 
 // Check if the $_REQUEST content actually is the plugin name
-if ( ! in_array( basename(__DIR__) . '/zero-spam.php', $_REQUEST['checked'] ) ) {
+if ( isset( $_REQUEST['checked'] ) && ! in_array( basename(__DIR__) . '/zero-spam.php', $_REQUEST['checked'] ) ) {
 	exit;
 }
 
-if ( 'delete-selected' !== $_REQUEST['action'] ) {
+if ( ! in_array( $_REQUEST['action'], array( 'delete-plugin', 'delete-selected' ) ) ) {
 	exit;
 }
 
@@ -53,7 +61,11 @@ if ( ! current_user_can( 'activate_plugins' ) ) {
 }
 
 // Run an admin referrer check to make sure it goes through authentication
-check_admin_referer( 'bulk-plugins' );
+if ( defined('DOING_AJAX') && DOING_AJAX ) {
+	check_ajax_referer( 'updates' );
+} else {
+	check_admin_referer( 'bulk-plugins' );
+}
 
 // Safe to carry on
 if ( false != get_option( 'zerospam_general_settings' ) || '' == get_option( 'zerospam_general_settings' ) ) {

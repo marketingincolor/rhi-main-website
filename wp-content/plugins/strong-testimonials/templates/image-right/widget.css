@@ -28,11 +28,15 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 -----------------------------------------------*/
 .strong-view.image-right-widget {
   display: block;
-  /* this handles short content */
+  /* setting a width handles short content */
   width: 100%;
 }
 .strong-view.image-right-widget * {
   box-sizing: border-box;
+}
+.strong-view.image-right-widget .testimonial.t-slide {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .strong-view.image-right-widget .testimonial-inner {
   display: block;
@@ -40,14 +44,22 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   width: 100%;
   height: 100%;
 }
-.strong-view.image-right-widget .strong_cycle .testimonial {
-  /* remove margin in slideshow */
-  margin-top: 0;
-  margin-bottom: 0;
+.strong-view.image-right-widget .testimonial-image {
+  max-width: 100%;
 }
-.strong-view.image-right-widget .strong_cycle .testimonial:not(:first-child) {
-  /* prevents flash on slow page load */
-  display: none;
+.strong-view.image-right-widget .testimonial-field-before {
+  margin-right: 0.5em;
+}
+
+.strong-view .screen-reader-text {
+  /* copied from Twenty Sixteen theme */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  /* many screen reader and browser combinations announce broken words as they would appear visually */
+  word-wrap: normal !important;
 }
 
 /* Template
@@ -88,6 +100,27 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 }
 .strong-view.image-right-widget .readmore {
   margin-top: 1em;
+}
+.strong-view.image-right-widget .readmore-page {
+  border: 1px solid #E6E6E6;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* Slideshow
+-----------------------------------------------*/
+.strong-view.image-right-widget.slider-container .strong-content {
+  margin: 0 auto;
+}
+.strong-view.image-right-widget.slider-container .testimonial:not(:first-child) {
+  display: none;
+}
+.strong-view.image-right-widget.nav-position-inside .testimonial-inner {
+  padding-bottom: 48px;
+}
+.strong-view.image-right-widget.controls-type-sides .testimonial-inner {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Responsive

@@ -1,65 +1,121 @@
 .strong-form {
-	margin: 0 auto;
-	padding: 20px;
+  margin: 0 auto;
 
-	.required.symbol:after {
-		content: '*';
-		color: #FF0000;
-		margin: 0 4px;
-	}
+  .form-field {
+    margin-bottom: 1.5em;
 
-	label {
-		display: inline-block;
-		float: none;
-	}
+    &.submit {
+      margin-bottom: 0;
+    }
+  }
 
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="file"],
-	select,
-	textarea {
-		box-sizing: border-box;
-		display: block;
-		float: none;
-		width: 100%;
-	}
+  .required.symbol:after {
+    content: '*';
+    color: #FF0000;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0 5px;
+    position: relative;
+    top: 5px;
+  }
 
-	textarea {
-		height: 16em;
-	}
+  label {
+    display: inline-block;
+    float: none;
+  }
 
-	span.error,
-	label.error {
-		display: block;
-	}
 
-	.form-field .before {
-		display: block;
-	}
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="file"],
+  select,
+  textarea {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    width: 100%;
+  }
 
-	.form-field .after {
-		display: block;
-	}
+  input[type="checkbox"] {
+    // normally 13px, this adds 5px, new size = 18px
+    -webkit-transform: scale(1.4);
+    -moz-transform:    scale(1.4);
+    -ms-transform:     scale(1.4);
+    transform:         scale(1.4);
+    margin-left: 12px;
+    margin-right: 6px;
+
+    + label {
+      font-weight: 400;
+      padding: 5px;
+
+    }
+
+    &:focus + label {
+      outline: 1px solid #CCC;
+    }
+  }
+
+  textarea {
+    height: 16em;
+  }
+
+  span.error,
+  label.error {
+    display: block;
+  }
+
+  .before {
+    display: block;
+  }
+
+  .after {
+    display: block;
+  }
+}
+
+.strong-form-inner {
+  padding: 20px;
 }
 
 input.captcha {
-	display: block;
-	width: auto;
+  display: block;
+  width: auto;
 }
 
 img.captcha {
-	border: 0;
+  border: 0;
 }
 
 .wpmtst-captcha {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
-.testimonial-success {
-	background: #E9F9E5;
-	border: 1px solid #B4E8AA;
-	color: #1C8400;
-	padding: 5px 10px;
-	margin-bottom: 1em;
+/* category checklist */
+.strong-form {
+  .strong-category-list-panel {
+  }
+
+  ul.strong-category-list,
+  ul.strong-category-list ul.children {
+    list-style-type: none;
+
+    label {
+      font-weight: 400;
+      white-space: nowrap;
+      word-wrap: break-word;
+    }
+  }
+
+  ul.strong-category-list {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  ul.strong-category-list ul.children {
+    margin-left: 1.5em;
+    padding-left: 0;
+  }
+
 }

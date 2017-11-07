@@ -66,6 +66,8 @@
 				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/storm-guard-restoration/').'">Storm Guard Restoration</a><br />';
 			} if ( current_user_can( 'administrator' ) || current_user_can( 'fran_sam' ) ) {
 				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/scout-mollys/').'">Scout & Mollys</a><br />';
+			} if ( current_user_can( 'administrator' ) || current_user_can( 'fran_dbs' ) ) {
+				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/diesel-barbershop/').'">Diesel Barbershop</a><br />';
 			} ?>
 			</p>
 			<p class="login-list">

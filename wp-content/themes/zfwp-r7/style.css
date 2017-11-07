@@ -400,7 +400,7 @@ div#custom-nav { height:180px; display:inline-block; vertical-align:middle; }
 .entry-content hr, #main-content div hr { border:0; height:2px; width:25%; background-color:#7995b9; }
 .entry-content img { border-radius:15px; }
 
-.entry-content .dlm-downloads { display:inline-block; margin-bottom:1.25em; list-style:none; max-height: 240px; overflow-x:hidden;  overflow-y:scroll; }
+.entry-content .dlm-downloads { display:inline-block; margin-bottom:1.25em; list-style:none; max-height: 240px; overflow-x:hidden;  overflow-y:scroll; margin-left:0em; width:100%;}
 .entry-content .dlm-downloads li { font-size:.75em; width:48%; float:left; }
 .entry-content .dlm-downloads li p { font-size:.5em; margin-bottom:.125em; }
 /**

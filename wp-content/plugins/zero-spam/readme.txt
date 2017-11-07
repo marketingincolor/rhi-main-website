@@ -1,14 +1,14 @@
 === WordPress Zero Spam ===
-Contributors: bmarshall511, afragen, tangrufus, leewillis77, macbookandrew
+Contributors: bmarshall511, afragen, tangrufus, leewillis77, macbookandrew, jaredatch, karpstrucking, thiagolcks, geekstreetwp
 Donate link: https://www.gittip.com/bmarshall511/
 Tags: comments, spam, antispam, anti-spam, comment spam, spambot, spammer, spam free, spam blocker, registration spam
 Requires at least: 3.0.0
-Tested up to: 4.3.1
-Stable tag: 2.0.2
+Tested up to: 4.6.1
+Stable tag: 3.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Zero Spam makes blocking spam comments a cinch. Install, activate and enjoy a spam-free site. Supports Gravity Forms, Ninja Forms, BuddyPress & more!
+Zero Spam makes blocking spam comments a cinch. Install, activate and enjoy a spam-free site. Even supports third-party plugins!
 
 == Description ==
 
@@ -36,6 +36,7 @@ Major features in WordPress Zero Spam include:
 * Gravity Form
 * Ninja Forms
 * BuddyPress
+* WPForms
 
 <em>**Note:** This plugin does not work with Jetpack Comments. For more information, see https://wordpress.org/support/topic/incompatible-with-jetpack-comments.</em>
 
@@ -84,7 +85,8 @@ Yes, see below:
 * `zero_spam_found_spam_gf_form_submission` - Runs after a spam Gravity Form submission is detected
 * `zero_spam_ip_blocked` - Runs after a blocked IP attempts to visit the site
 * `zero_spam_found_spam_buddypress_registration` - Runs when a BuddyPress spam registration is detected
-* `zero_spam_found_spam_nf_form_submission` - Runs when a Ninja Forms submission is detected
+* `zero_spam_found_spam_nf_form_submission` - Runs when a spam Ninja Forms submission is detected
+* `zero_spam_found_spam_wpf_form_submission` - Runs when a spam WPForms submission is detected
 
 = Does this plugin support Contact Form 7 forms? =
 
@@ -102,6 +104,10 @@ Yes!
 
 Yes!
 
+= Does this plugin support WPForms? =
+
+Yes! Thanks to @jaredatch.
+
 = Does this plugin work with caching plugins like W3 Total Cache? =
 
 Yes! Thanks to @shazahm1.
@@ -117,6 +123,47 @@ Yes! Install [Sunny](https://wphuman.com/go/sunny/) and follow this [guide](http
 == Screenshots ==
 
 == Changelog ==
+
+= v3.0.6 (December 27, 2016) =
+* [bug] Gravity Forms submission fix (https://github.com/bmarshall511/wordpress-zero-spam/pull/140).
+
+= v3.0.5 (December 23, 2016) =
+* [bug] Gravity Forms submission fix.
+
+= v3.0.4 (November 24, 2016) =
+* [bug] Fixed IP location lookup issue.
+* [improvement] Updated the Grunt development tasks.
+
+= v3.0.3 (November 23, 2016) =
+* [bug] Fixed issue with settings not getting saved (https://wordpress.org/support/topic/can-unselect-default-options/).
+* [bug] Fixed PHP notice on Spammer Log page.
+* [bug] Removed outdated CloudFlare instructions.
+* [improvement] Made the JS file version dynamic.
+
+= 3.0.2 =
+* Fixed fatal error.
+
+= 3.0.1 =
+* Added the default options when the plugin is activated.
+
+= 3.0.0 =
+* Lots of updates & fixes! Improved code documentation to help promote contributions.
+
+= 2.2.1 =
+* Fixed uninstall issue, thanks @thiagolcks (https://github.com/bmarshall511/wordpress-zero-spam/pull/139)
+
+= 2.2.0 =
+* Fixed security issue, thanks @thiagolcks (https://github.com/bmarshall511/wordpress-zero-spam/pull/138)
+
+= 2.1.2 =
+* Fixed issue with Gravity Forms not working, thanks @karpstrucking & @jaredatch (https://github.com/bmarshall511/wordpress-zero-spam/issues/132)
+* Updated the repo link on the admin page (https://github.com/bmarshall511/wordpress-zero-spam/issues/124)
+
+= 2.1.1 =
+* Minor updates
+
+= 2.1.0 =
+* Added support for WPForms (https://github.com/bmarshall511/wordpress-zero-spam/issues/129)
 
 = 2.0.2 =
 * Added the 'contactform' id to fix issue with valid comments not getting through (https://wordpress.org/support/topic/false-positives-6)
@@ -207,8 +254,11 @@ Yes! Install [Sunny](https://wphuman.com/go/sunny/) and follow this [guide](http
 
 == Contributors ==
 * [Ben Marshall](https://github.com/bmarshall511)
+* [Thiago Locks](https://github.com/thiagolcks)
 * [Andy Fragen](https://github.com/afragen)
 * [Tang Rufus](https://github.com/TangRufus)
 * [Lee Willis](https://github.com/leewillis77)
 * [Andrew Minion](https://github.com/macbookandrew)
-
+* [Jared Atchison](https://github.com/jaredatch)
+* [Lucas Karpiuk](https://github.com/karpstrucking)
+* [Russell Aaron](https://github.com/KrashKartMedia)

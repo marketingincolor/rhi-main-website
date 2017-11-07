@@ -78,7 +78,7 @@ class DLM_Download {
 	 * exists function.
 	 *
 	 * @access public
-	 * @return void
+	 * @return bool
 	 */
 	public function exists() {
 		return ( ! is_null( $this->post ) );
@@ -91,7 +91,7 @@ class DLM_Download {
 	 *
 	 * @param mixed $version_id
 	 *
-	 * @return void
+	 * @return bool
 	 */
 	public function version_exists( $version_id ) {
 		return in_array( $version_id, array_keys( $this->get_file_versions() ) );
@@ -477,7 +477,7 @@ class DLM_Download {
 	 * @access public
 	 * @return bool
 	 */
-	function is_featured() {
+	public function is_featured() {
 		return ( $this->featured == 'yes' ) ? true : false;
 	}
 
@@ -487,7 +487,7 @@ class DLM_Download {
 	 * @access public
 	 * @return bool
 	 */
-	function is_members_only() {
+	public function is_members_only() {
 		return ( $this->members_only == 'yes' ) ? true : false;
 	}
 
@@ -497,7 +497,7 @@ class DLM_Download {
 	 * @access public
 	 * @return bool
 	 */
-	function redirect_only() {
+	public function redirect_only() {
 		return ( $this->redirect_only == 'yes' ) ? true : false;
 	}
 
@@ -507,7 +507,7 @@ class DLM_Download {
 	 * @access public
 	 * @return array
 	 */
-	function get_file_version_ids() {
+	public function get_file_version_ids() {
 		if ( ! is_array( $this->file_version_ids ) ) {
 			$transient_name = 'dlm_file_version_ids_' . $this->id;
 
@@ -528,11 +528,13 @@ class DLM_Download {
 	 * @return array
 	 */
 	public function get_file_versions() {
+
 		if ( $this->files ) {
 			return $this->files;
 		}
 
 		$version_ids = $this->get_file_version_ids();
+
 		$this->files = array();
 
 		foreach ( $version_ids as $version_id ) {

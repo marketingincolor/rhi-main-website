@@ -90,6 +90,11 @@ if ( ! class_exists( 'Tribe__Events__Admin_List' ) ) {
 		 * @return  Array                   Modified SQL clauses
 		 */
 		public static function sort_by_event_date( Array $clauses, WP_Query $wp_query ) {
+			// bail if this is not a query for event post type
+			if ( $wp_query->get( 'post_type' ) !== Tribe__Events__Main::POSTTYPE ) {
+				return $clauses;
+			}
+
 			global $wpdb;
 
 			$sort_direction = self::get_sort_direction( $wp_query );
@@ -104,7 +109,7 @@ if ( ! class_exists( 'Tribe__Events__Admin_List' ) ) {
 				$clauses['join'] .= " LEFT JOIN {$wpdb->postmeta} AS tribe_event_end_date ON {$wpdb->posts}.ID = tribe_event_end_date.post_id AND tribe_event_end_date.meta_key = '_EventEndDate' ";
 			}
 
-			$append_orderby = false;
+			$append_orderby   = false;
 			$original_orderby = null;
 
 			if ( ! empty( $clauses['orderby'] ) ) {
@@ -117,7 +122,7 @@ if ( ! class_exists( 'Tribe__Events__Admin_List' ) ) {
 			}
 
 			$start_orderby = "tribe_event_start_date.meta_value {$sort_direction}";
-			$end_orderby = "tribe_event_end_date.meta_value {$sort_direction}";
+			$end_orderby   = "tribe_event_end_date.meta_value {$sort_direction}";
 
 			$date_orderby = "{$start_orderby}, {$end_orderby}";
 
@@ -322,7 +327,7 @@ if ( ! class_exists( 'Tribe__Events__Admin_List' ) ) {
 				$total_posts -= $num_posts->$state;
 			}
 
-			$counts['all'] = "<a href='edit.php?post_type=tribe_events' class='current'>" . sprintf( esc_html__( 'All %s', 'the-events-calendar' ), "<span class='count'>({$total_posts})</span>" ) . '</a>';
+			$counts['all'] = "<a href='edit.php?post_type=tribe_events' class='current'>" . sprintf( esc_html_x( 'All %s', '%s Event count in admin list', 'the-events-calendar' ), "<span class='count'>({$total_posts})</span>" ) . '</a>';
 
 			foreach ( get_post_stati( array( 'show_in_admin_status_list' => true ), 'objects' ) as $status ) {
 				$class = '';
