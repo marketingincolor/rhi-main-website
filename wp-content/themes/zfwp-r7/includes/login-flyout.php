@@ -68,6 +68,8 @@
 				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/scout-mollys/').'">Scout & Mollys</a><br />';
 			} if ( current_user_can( 'administrator' ) || current_user_can( 'fran_dbs' ) ) {
 				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/diesel-barbershop/').'">Diesel Barbershop</a><br />';
+			} if ( current_user_can( 'administrator' ) || current_user_can( 'fran_fgl' ) ) {
+				echo '&nbsp;&middot;&nbsp;<a href="'.site_url('/franchisor/flirty-girl/').'">Flirty Girl</a><br />';
 			} ?>
 			</p>
 			<p class="login-list">
